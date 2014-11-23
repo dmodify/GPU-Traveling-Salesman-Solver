@@ -1,0 +1,17 @@
+compile:
+
+make -j2
+
+run:
+
+./two_opt tsp_file
+
+(-j2 option speeds up compilation on multicore machines)
+
+Chances are you will have to change the NVCC option in the makefile to match
+the location of your nvcc binary. You will also probably have to change the
+NVCCARCH option to match your version of NVCC. This code will probably not
+work on versions prior to 3.0.
+
+The tsp format must be in DIMACs format. You can download instances here:
+http://dimacs.rutgers.edu/Challenges/TSP/download.html
